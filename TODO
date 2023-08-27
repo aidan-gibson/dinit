@@ -1,3 +1,16 @@
+now:
+* improve error message when service unable to open logfile
+* dinitcheck:
+  * consumer-of:
+    * check consumed service exists, is output-producing, has log-type=pipe
+  * logfile:
+    * check directory is writable
+* add preferred alias for "smooth-recovery": "silent-restart"
+* "start-interruptible" should work for process & bgprocess services too
+* check services cannot be "after"/"before" themselves
+* standardise error messages, exception messages. General format, quote types, punctuation, capitalisation
+* review exceptions thrown by load_service.h process_service_line - include setting name where possible
+
 For version 0.17:
 -----------------
 * [DONE] Limit memory use by control connections. Currently clients have command responses queued without
